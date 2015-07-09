@@ -167,7 +167,7 @@ def create_stix_file():
     stix_package.add(hash_indicator)
 
     # Save to file
-    save_as = "/var/www/pet-api/flask/stix/fireeye_" + str(data['alert']['id']) + ".xml"
+    save_as = "./stix/fireeye_" + str(data['alert']['id']) + ".xml"
     f = open(save_as, 'w')
     f.write(stix_package.to_xml())
     f.close
