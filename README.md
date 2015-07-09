@@ -1,1 +1,43 @@
 # fe2stix
+Simple API that digests FireEye notification (json) and generates a STIX XML document.
+
+## Installation
+### Prereqs
+```
+$ pip install stix
+```
+
+## Install
+```
+$ git clone https://github.com/BechtelCIRT/fe2stix
+$ cd fe2stix
+$ virtualenv ./
+$ ./bin/pip install flask
+```
+
+## Test it out!
+### Post data with cURL
+```
+$ curl -H "Content-Type: application/json" -X POST -d '{JSON OBJECT}' http://youserver.com:5000/api/v1/fe
+```
+
+You should receive the following response:
+```
+{
+  "Success": "STIX document succesfully generated,"
+}
+```
+By default, inidcators will go to the /tmp directory.
+
+### Configure FireEye Notification
+1. Create HTTP Event
+2. Add HTTP Server
+3. Name it 'fe2stix'
+4. Set the server URL as 'http://youserver.com:5000/api/v1/fe'
+5. Notify for all events and deliver per event
+6. Leave it as the generic provider
+7. Select 'JSON Normal' for the message format
+8. Submit a malicious sample, and watch the magic happen
+
+## WSGI Configuration
+Coming soon...
