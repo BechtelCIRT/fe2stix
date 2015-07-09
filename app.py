@@ -19,6 +19,9 @@ from stix.utils import set_id_namespace
 from stix.data_marking import Marking, MarkingSpecification
 from stix.extensions.marking.tlp import TLPMarkingStructure
 
+# Constants
+stix_directory = "/tmp"
+
 app = Flask(__name__)
 
 @app.route('/api/v1/fe', methods=['POST', 'GET'])
@@ -167,7 +170,7 @@ def create_stix_file():
     stix_package.add(hash_indicator)
 
     # Save to file
-    save_as = "./stix/fireeye_" + str(data['alert']['id']) + ".xml"
+    save_as = stix_directory + "/fireeye_" + str(data['alert']['id']) + ".xml"
     f = open(save_as, 'w')
     f.write(stix_package.to_xml())
     f.close
