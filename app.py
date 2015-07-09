@@ -21,7 +21,7 @@ from stix.extensions.marking.tlp import TLPMarkingStructure
 
 app = Flask(__name__)
 
-@app.route('api/v1/fe', methods=['POST', 'GET'])
+@app.route('/api/v1/fe', methods=['POST', 'GET'])
 def create_stix_file():
     # List of indicators to be deduped
     hostnames = []
