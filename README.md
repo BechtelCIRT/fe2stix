@@ -15,6 +15,15 @@ $ virtualenv ./
 $ ./bin/pip install flask
 ```
 
+## Customize
+Set the following constraints in the app.py file:
+```
+# Definitions
+SAVE_DIRECTORY = "/tmp" <- Where you would like to save your STIX files.
+PRODUCER_NAME = "Bechtel Corporation" <- Company/Person producing the file.
+PRODUCER_URL = "http://bechtel.com" <- The website of the producer.
+```
+
 ## Test it out!
 ### Post data with cURL
 ```
