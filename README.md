@@ -52,5 +52,7 @@ By default, inidcators will go to the /tmp directory.
 7. Select 'JSON Normal' for the message format
 8. Submit a malicious sample, and watch the magic happen
 
-## WSGI Configuration
-Coming soon...
+### TODO
+* Parse out additional indicators
+* Provide Apache/WSGI daemon configuration
+* Expand API to allow misc. POSTs of data and parse indicators
