@@ -1,0 +1,272 @@
+<stix:STIX_Package 
+	xmlns:AddressObj="http://cybox.mitre.org/objects#AddressObject-2"
+	xmlns:FileObj="http://cybox.mitre.org/objects#FileObject-2"
+	xmlns:URIObj="http://cybox.mitre.org/objects#URIObject-2"
+	xmlns:YOUR COMPANY="http://www.yourcompany.com"
+	xmlns:cybox="http://cybox.mitre.org/cybox-2"
+	xmlns:cyboxCommon="http://cybox.mitre.org/common-2"
+	xmlns:cyboxVocabs="http://cybox.mitre.org/default_vocabularies-2"
+	xmlns:indicator="http://stix.mitre.org/Indicator-2"
+	xmlns:stix="http://stix.mitre.org/stix-1"
+	xmlns:stixCommon="http://stix.mitre.org/common-1"
+	xmlns:stixVocabs="http://stix.mitre.org/default_vocabularies-1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="YOUR COMPANY:Package-cc02b830-05b7-4168-960c-c39bd67ee693" version="1.2">
+    <stix:STIX_Header>
+        <stix:Package_Intent xsi:type="stixVocabs:PackageIntentVocab-1.0">Indicators - Malware Artifacts</stix:Package_Intent>
+        <stix:Description>YOUR COMPANY: FireEye Sample ID 2001</stix:Description>
+    </stix:STIX_Header>
+    <stix:Indicators>
+        <stix:Indicator id="YOUR COMPANY:indicator-175bea51-fba3-4bbb-9ed7-2e1b76091f22" timestamp="2015-07-10T17:28:21.195121+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Malware Artifacts - Domain</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">Domain Watchlist</indicator:Type>
+            <indicator:Description>Domains derived from sandboxed malware sample.  MD5 Hash: d95b4d730efd54bae7544eb2ba809239</indicator:Description>
+            <indicator:Short_Description>Domainss from d95b4d730efd54bae7544eb2ba809239</indicator:Short_Description>
+            <indicator:Observable id="YOUR COMPANY:Observable-940fc428-9e3f-495a-a969-14067502b9fa">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="YOUR COMPANY:Observable-c7d46813-4a88-46e9-bf7d-a1e4a36e273b">
+                        <cybox:Title>Malware Artifact - Domain</cybox:Title>
+                        <cybox:Description>Domain derived from sandboxed malware sample.</cybox:Description>
+                        <cybox:Object id="YOUR COMPANY:URI-a73f0dfb-835c-4ea6-b562-492df37e49ee">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                                <URIObj:Value>c2.weberty.link</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="YOUR COMPANY:Observable-9b9d0828-90c7-4235-82e7-c56aa7ea5fac">
+                        <cybox:Title>Malware Artifact - Domain</cybox:Title>
+                        <cybox:Description>Domain derived from sandboxed malware sample.</cybox:Description>
+                        <cybox:Object id="YOUR COMPANY:URI-1bdad96a-b79c-461d-a59a-52ad73471a8f">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                                <URIObj:Value>c1.diriginal.org</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="YOUR COMPANY:Observable-83d7757d-d74e-486a-999b-200555825934">
+                        <cybox:Title>Malware Artifact - Domain</cybox:Title>
+                        <cybox:Description>Domain derived from sandboxed malware sample.</cybox:Description>
+                        <cybox:Object id="YOUR COMPANY:URI-a8b45d13-cbbe-41ce-b9a2-3b8afc618c8e">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                                <URIObj:Value>r1.fasties.org</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="YOUR COMPANY:Observable-a78b78c8-a36d-4877-ad2b-9ffa52d5d2a5">
+                        <cybox:Title>Malware Artifact - Domain</cybox:Title>
+                        <cybox:Description>Domain derived from sandboxed malware sample.</cybox:Description>
+                        <cybox:Object id="YOUR COMPANY:URI-af9b1bc4-9578-432c-baf0-312b606cbe94">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="Domain Name">
+                                <URIObj:Value>r2.lovebirth.info</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>YOUR COMPANY</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Time>
+                    <cyboxCommon:Produced_Time>2015-07-10T17:28:21.195525+00:00</cyboxCommon:Produced_Time>
+                </stixCommon:Time>
+            </indicator:Producer>
+        </stix:Indicator>
+        <stix:Indicator id="YOUR COMPANY:indicator-d3b992fa-67bb-477d-b9f9-4547637b7556" timestamp="2015-07-10T17:28:21.195700+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Malware Artifacts - IP</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">IP Watchlist</indicator:Type>
+            <indicator:Description>IPs derived from sandboxed malware sample.  MD5 Hash: d95b4d730efd54bae7544eb2ba809239</indicator:Description>
+            <indicator:Short_Description>IPs from d95b4d730efd54bae7544eb2ba809239</indicator:Short_Description>
+            <indicator:Observable id="YOUR COMPANY:Observable-a9215f3a-cba6-4c8b-835a-44bee0f0f5fa">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="YOUR COMPANY:Observable-263afd79-1392-4a31-942f-2c2529c50c85">
+                        <cybox:Title>Malware Artifact - IP</cybox:Title>
+                        <cybox:Description>IP derived from sandboxed malware sample.</cybox:Description>
+                        <cybox:Object id="YOUR COMPANY:Address-38e6f62c-2226-4a61-96c4-ab50135f2677">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value>199.16.199.3</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="YOUR COMPANY:Observable-03e2b2b2-74e3-41a2-9209-76b9360785fc">
+                        <cybox:Title>Malware Artifact - IP</cybox:Title>
+                        <cybox:Description>IP derived from sandboxed malware sample.</cybox:Description>
+                        <cybox:Object id="YOUR COMPANY:Address-3e247810-1db9-493f-8d55-519a1d8b1ed6">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value>199.16.199.2</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="YOUR COMPANY:Observable-f2b2641e-c65e-45c4-b302-88eaf12b0102">
+                        <cybox:Title>Malware Artifact - IP</cybox:Title>
+                        <cybox:Description>IP derived from sandboxed malware sample.</cybox:Description>
+                        <cybox:Object id="YOUR COMPANY:Address-22dcf502-50bd-4daa-b88f-1035f87151e0">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value>199.16.199.5</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="YOUR COMPANY:Observable-d3b1ea7c-8c89-4850-ad0c-a0647b4f6099">
+                        <cybox:Title>Malware Artifact - IP</cybox:Title>
+                        <cybox:Description>IP derived from sandboxed malware sample.</cybox:Description>
+                        <cybox:Object id="YOUR COMPANY:Address-e2412cd4-aeaa-4c6f-9742-f1eda2434fe9">
+                            <cybox:Properties xsi:type="AddressObj:AddressObjectType" category="ipv4-addr">
+                                <AddressObj:Address_Value>199.16.199.4</AddressObj:Address_Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>YOUR COMPANY</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Time>
+                    <cyboxCommon:Produced_Time>2015-07-10T17:28:21.195880+00:00</cyboxCommon:Produced_Time>
+                </stixCommon:Time>
+            </indicator:Producer>
+        </stix:Indicator>
+        <stix:Indicator id="YOUR COMPANY:indicator-1600b530-ed30-4b7f-8dd2-1228d384ec99" timestamp="2015-07-10T17:28:21.196024+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Malware Artifacts - URL</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">URL Watchlist</indicator:Type>
+            <indicator:Description>URLs derived from sandboxed malware sample.  MD5 Hash: d95b4d730efd54bae7544eb2ba809239</indicator:Description>
+            <indicator:Short_Description>URLs from d95b4d730efd54bae7544eb2ba809239</indicator:Short_Description>
+            <indicator:Observable id="YOUR COMPANY:Observable-4cf38c26-dee3-4b0c-bc72-019bf5e57684">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="YOUR COMPANY:Observable-768de11d-3365-4837-9c6d-265d719ad9ca">
+                        <cybox:Title>Malware Artifact - URL</cybox:Title>
+                        <cybox:Description>URL derived from sandboxed malware sample.</cybox:Description>
+                        <cybox:Object id="YOUR COMPANY:URI-3c264274-af53-450a-94bd-eed71bbed506">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>c2.weberty.link/?step_id=3&amp;sf=1&amp;installer_id=5915960688728027693&amp;publisher_id=20769&amp;source_id=0&amp;page_id=0&amp;affiliate_id=0&amp;country_code=CL&amp;locale=EN&amp;browser_id=4&amp;download_id=977149187692695544&amp;external_id=0&amp;installer_type=IX_2013&amp;hardware_id=3721586843870517576&amp;session_id=12140184880672269436&amp;self_redirect=0&amp;filesize=&amp;product_file_name=gapps-lp-20141228-core-signed.exe&amp;product_name=gapps-lp-20141228-core-signed&amp;product_title=gapps-lp-20141228-core-signed&amp;product_download_url=http%3A%2F%2Ffs1.d-h.st%2Fdownload%2F00156%2FinV%2Fgapps-lp-20141228-core-signed.zip&amp;installer_file_name=gapps-lp-20141228-core-signed&amp;layout_id=8&amp;for_html_installer=1&amp;project_name=d-h.st+download+manager&amp;reffer=http%3A%2F%2Fd-h.st%2F&amp;st=0&amp;include_signature=0&amp;uuid=%252A</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="YOUR COMPANY:Observable-8b0e8e71-d2d9-455c-8b53-c3bf64ed08dd">
+                        <cybox:Title>Malware Artifact - URL</cybox:Title>
+                        <cybox:Description>URL derived from sandboxed malware sample.</cybox:Description>
+                        <cybox:Object id="YOUR COMPANY:URI-7c4c9d0a-ae18-4b30-842f-d6bbeca2de5f">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>c1.diriginal.org/?step_id=3&amp;sf=1&amp;installer_id=5915960688728027693&amp;publisher_id=20769&amp;source_id=0&amp;page_id=0&amp;affiliate_id=0&amp;country_code=CL&amp;locale=EN&amp;browser_id=4&amp;download_id=977149187692695544&amp;external_id=0&amp;installer_type=IX_2013&amp;hardware_id=3721586843870517576&amp;session_id=12140184880672269436&amp;self_redirect=0&amp;filesize=&amp;product_file_name=gapps-lp-20141228-core-signed.exe&amp;product_name=gapps-lp-20141228-core-signed&amp;product_title=gapps-lp-20141228-core-signed&amp;product_download_url=http%3A%2F%2Ffs1.d-h.st%2Fdownload%2F00156%2FinV%2Fgapps-lp-20141228-core-signed.zip&amp;installer_file_name=gapps-lp-20141228-core-signed&amp;layout_id=8&amp;for_html_installer=1&amp;project_name=d-h.st+download+manager&amp;reffer=http%3A%2F%2Fd-h.st%2F&amp;st=0&amp;include_signature=0&amp;uuid=%252A</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="YOUR COMPANY:Observable-20c6a2f6-0a63-474f-b926-f6a7d041dc3d">
+                        <cybox:Title>Malware Artifact - URL</cybox:Title>
+                        <cybox:Description>URL derived from sandboxed malware sample.</cybox:Description>
+                        <cybox:Object id="YOUR COMPANY:URI-6f078d58-c9d4-4c73-8d7e-0e4ce5c36c7d">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>c2.weberty.link/?step_id=2&amp;sf=1&amp;installer_id=5915960688728027693&amp;publisher_id=20769&amp;source_id=0&amp;page_id=0&amp;affiliate_id=0&amp;country_code=CL&amp;locale=EN&amp;browser_id=4&amp;download_id=977149187692695544&amp;external_id=0&amp;installer_type=IX_2013&amp;hardware_id=3721586843870517576&amp;session_id=12140184880672269436&amp;self_redirect=0&amp;filesize=&amp;product_file_name=gapps-lp-20141228-core-signed.exe&amp;product_name=gapps-lp-20141228-core-signed&amp;product_title=gapps-lp-20141228-core-signed&amp;product_download_url=http%3A%2F%2Ffs1.d-h.st%2Fdownload%2F00156%2FinV%2Fgapps-lp-20141228-core-signed.zip&amp;installer_file_name=gapps-lp-20141228-core-signed&amp;layout_id=8&amp;for_html_installer=1&amp;project_name=d-h.st+download+manager&amp;reffer=http%3A%2F%2Fd-h.st%2F&amp;st=0&amp;include_signature=0&amp;uuid=%252A</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="YOUR COMPANY:Observable-7f5ad23e-d042-45c8-a3c2-46606a3645d7">
+                        <cybox:Title>Malware Artifact - URL</cybox:Title>
+                        <cybox:Description>URL derived from sandboxed malware sample.</cybox:Description>
+                        <cybox:Object id="YOUR COMPANY:URI-63f4f515-c458-4778-aa98-f6de4c1d4510">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>c2.weberty.link/?step_id=1&amp;sf=1&amp;installer_id=5915960688728027693&amp;publisher_id=20769&amp;source_id=0&amp;page_id=0&amp;affiliate_id=0&amp;country_code=CL&amp;locale=EN&amp;browser_id=4&amp;download_id=977149187692695544&amp;external_id=0&amp;installer_type=IX_2013&amp;hardware_id=3721586843870517576&amp;session_id=12140184880672269436&amp;self_redirect=0&amp;filesize=&amp;product_file_name=gapps-lp-20141228-core-signed.exe&amp;product_name=gapps-lp-20141228-core-signed&amp;product_title=gapps-lp-20141228-core-signed&amp;product_download_url=http%3A%2F%2Ffs1.d-h.st%2Fdownload%2F00156%2FinV%2Fgapps-lp-20141228-core-signed.zip&amp;installer_file_name=gapps-lp-20141228-core-signed&amp;layout_id=8&amp;for_html_installer=1&amp;project_name=d-h.st+download+manager&amp;reffer=http%3A%2F%2Fd-h.st%2F&amp;st=0&amp;include_signature=0&amp;uuid=%252A</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="YOUR COMPANY:Observable-65483f05-29bc-443a-88f4-3dcdc2b79f18">
+                        <cybox:Title>Malware Artifact - URL</cybox:Title>
+                        <cybox:Description>URL derived from sandboxed malware sample.</cybox:Description>
+                        <cybox:Object id="YOUR COMPANY:URI-bb594439-0567-4a28-8741-882c4719ba10">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>c1.diriginal.org/?step_id=1&amp;sf=1&amp;installer_id=5915960688728027693&amp;publisher_id=20769&amp;source_id=0&amp;page_id=0&amp;affiliate_id=0&amp;country_code=CL&amp;locale=EN&amp;browser_id=4&amp;download_id=977149187692695544&amp;external_id=0&amp;installer_type=IX_2013&amp;hardware_id=3721586843870517576&amp;session_id=12140184880672269436&amp;self_redirect=0&amp;filesize=&amp;product_file_name=gapps-lp-20141228-core-signed.exe&amp;product_name=gapps-lp-20141228-core-signed&amp;product_title=gapps-lp-20141228-core-signed&amp;product_download_url=http%3A%2F%2Ffs1.d-h.st%2Fdownload%2F00156%2FinV%2Fgapps-lp-20141228-core-signed.zip&amp;installer_file_name=gapps-lp-20141228-core-signed&amp;layout_id=8&amp;for_html_installer=1&amp;project_name=d-h.st+download+manager&amp;reffer=http%3A%2F%2Fd-h.st%2F&amp;st=0&amp;include_signature=0&amp;uuid=%252A</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="YOUR COMPANY:Observable-02b032dd-e550-4ee6-a223-e05198b35338">
+                        <cybox:Title>Malware Artifact - URL</cybox:Title>
+                        <cybox:Description>URL derived from sandboxed malware sample.</cybox:Description>
+                        <cybox:Object id="YOUR COMPANY:URI-7a2fdab6-b760-4c6c-b400-61d8c28da408">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>r2.lovebirth.info/</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="YOUR COMPANY:Observable-b97d9b27-fd92-4f12-af94-a4d8e9039429">
+                        <cybox:Title>Malware Artifact - URL</cybox:Title>
+                        <cybox:Description>URL derived from sandboxed malware sample.</cybox:Description>
+                        <cybox:Object id="YOUR COMPANY:URI-b9da09ea-f963-46f2-914b-eabb6903fbb0">
+                            <cybox:Properties xsi:type="URIObj:URIObjectType" type="URL">
+                                <URIObj:Value>r1.fasties.org/</URIObj:Value>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>YOUR COMPANY</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Time>
+                    <cyboxCommon:Produced_Time>2015-07-10T17:28:21.196202+00:00</cyboxCommon:Produced_Time>
+                </stixCommon:Time>
+            </indicator:Producer>
+        </stix:Indicator>
+        <stix:Indicator id="YOUR COMPANY:indicator-be3b0b2e-982d-4832-bf72-df9d8b6cf84f" timestamp="2015-07-10T17:28:21.196315+00:00" xsi:type='indicator:IndicatorType'>
+            <indicator:Title>Malware Artifacts - File Hash</indicator:Title>
+            <indicator:Type xsi:type="stixVocabs:IndicatorTypeVocab-1.1">File Hash Watchlist</indicator:Type>
+            <indicator:Description>File hashes derived from sandboxed malware sample.  MD5 Hash: d95b4d730efd54bae7544eb2ba809239</indicator:Description>
+            <indicator:Short_Description>Hash from d95b4d730efd54bae7544eb2ba809239</indicator:Short_Description>
+            <indicator:Observable id="YOUR COMPANY:Observable-799a9341-b5d0-47d1-99b4-b9dbb0e823f3">
+                <cybox:Observable_Composition operator="OR">
+                    <cybox:Observable id="YOUR COMPANY:Observable-8a524b53-b862-4065-b71b-f77b404b1a1c">
+                        <cybox:Title>Malware Artifact - File Hash</cybox:Title>
+                        <cybox:Description>File hash derived from sandboxed malware sample.</cybox:Description>
+                        <cybox:Object id="YOUR COMPANY:File-9e4de54f-f86a-4333-adf0-77f65ac617e6">
+                            <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                <FileObj:File_Name>svchost.exe</FileObj:File_Name>
+                                <FileObj:Hashes>
+                                    <cyboxCommon:Hash>
+                                        <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                        <cyboxCommon:Simple_Hash_Value>54a47f6b5e09a77e61649109c6a08866</cyboxCommon:Simple_Hash_Value>
+                                    </cyboxCommon:Hash>
+                                </FileObj:Hashes>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="YOUR COMPANY:Observable-5e4d4796-dbe7-4580-b70d-cf2bdee5e8fc">
+                        <cybox:Title>Malware Artifact - File Hash</cybox:Title>
+                        <cybox:Description>File hash derived from sandboxed malware sample.</cybox:Description>
+                        <cybox:Object id="YOUR COMPANY:File-9987190a-d2f4-465d-8ccd-50a973d1eae1">
+                            <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                <FileObj:File_Name>gapps-lp-20141228-core-signed.exe</FileObj:File_Name>
+                                <FileObj:Hashes>
+                                    <cyboxCommon:Hash>
+                                        <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">MD5</cyboxCommon:Type>
+                                        <cyboxCommon:Simple_Hash_Value>d95b4d730efd54bae7544eb2ba809239</cyboxCommon:Simple_Hash_Value>
+                                    </cyboxCommon:Hash>
+                                </FileObj:Hashes>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                    <cybox:Observable id="YOUR COMPANY:Observable-d5f98c44-4115-407e-a990-c8c2d92299d7">
+                        <cybox:Title>Malware Artifact - File Hash</cybox:Title>
+                        <cybox:Description>File hash derived from sandboxed malware sample.</cybox:Description>
+                        <cybox:Object id="YOUR COMPANY:File-4c4ef165-015c-429f-8ba8-fac690bf8b31">
+                            <cybox:Properties xsi:type="FileObj:FileObjectType">
+                                <FileObj:File_Name>gapps-lp-20141228-core-signed.exe</FileObj:File_Name>
+                                <FileObj:Hashes>
+                                    <cyboxCommon:Hash>
+                                        <cyboxCommon:Type xsi:type="cyboxVocabs:HashNameVocab-1.0">SHA1</cyboxCommon:Type>
+                                        <cyboxCommon:Simple_Hash_Value>2d9521a654f49b0f154ad556c9c76b2ec5c1760a</cyboxCommon:Simple_Hash_Value>
+                                    </cyboxCommon:Hash>
+                                </FileObj:Hashes>
+                            </cybox:Properties>
+                        </cybox:Object>
+                    </cybox:Observable>
+                </cybox:Observable_Composition>
+            </indicator:Observable>
+            <indicator:Producer>
+                <stixCommon:Identity>
+                    <stixCommon:Name>YOUR COMPANY</stixCommon:Name>
+                </stixCommon:Identity>
+                <stixCommon:Time>
+                    <cyboxCommon:Produced_Time>2015-07-10T17:28:21.196489+00:00</cyboxCommon:Produced_Time>
+                </stixCommon:Time>
+            </indicator:Producer>
+        </stix:Indicator>
+    </stix:Indicators>
+</stix:STIX_Package>
