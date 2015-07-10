@@ -18,9 +18,9 @@ $ ./bin/pip install flask
 ## Configuration
 Set the following constraints in the config.py file:
 ```
-SAVE_DIRECTORY = "/tmp" <- Where you would like to save your STIX files.
-PRODUCER_NAME = "Bechtel Corporation" <- Company/Person producing the file.
-PRODUCER_URL = "http://bechtel.com" <- The website of the producer.
+SAVE_DIRECTORY = "/tmp"
+PRODUCER_NAME = "YOUR COMPANY"
+PRODUCER_URL = "http://www.yourcompany.com"
 ```
 
 ## Test it out!
