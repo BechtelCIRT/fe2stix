@@ -46,7 +46,7 @@ def create_stix_file():
     sha1s = []
 
     # Set namespace
-    NAMESPACE = { str(PRODUCER_URL) : str(PRODUCER_NAME) }
+    NAMESPACE = { PRODUCER_URL : PRODUCER_NAME }
     set_id_namespace(NAMESPACE)
 
     # JSON load the POSTed request data
