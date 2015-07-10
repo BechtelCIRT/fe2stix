@@ -3,8 +3,13 @@ Simple API that digests FireEye notification (json) and generates a STIX XML doc
 
 ## Installation
 ### Prereqs
+Install Python STIX to your system.
 ```
 $ pip install stix
+```
+You can optionally install different versions of stix, see https://pypi.python.org/pypi/stix.
+```
+$ pip install stix-1.x.x.x
 ```
 
 ## Install
