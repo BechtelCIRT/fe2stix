@@ -84,7 +84,7 @@ def create_stix_file():
         domain_indicator.type = "Malware Artifacts"
         domain_indicator.description = ("Domains derived from sandboxed malware sample.  MD5 Hash: " + sample_hash)
         domain_indicator.short_description = ("Domainss from " + sample_hash)
-        domain_indicator.set_producer_identity("Bechtel Corporation")
+        domain_indicator.set_producer_identity(PRODUCER_NAME)
         domain_indicator.set_produced_time(utils.dates.now())
         domain_indicator.indicator_types.append("Domain Watchlist")
 
@@ -93,7 +93,7 @@ def create_stix_file():
         ip_indicator.title = "Malware Artifacts - IP"
         ip_indicator.description = ("IPs derived from sandboxed malware sample.  MD5 Hash: " + sample_hash)
         ip_indicator.short_description = ("IPs from " + sample_hash)
-        ip_indicator.set_producer_identity("Bechtel Corporation")
+        ip_indicator.set_producer_identity(PRODUCER_NAME)
         ip_indicator.set_produced_time(utils.dates.now())
         ip_indicator.indicator_types.append("IP Watchlist")
 
@@ -102,7 +102,7 @@ def create_stix_file():
         url_indicator.title = "Malware Artifacts - URL"
         url_indicator.description = ("URLs derived from sandboxed malware sample.  MD5 Hash: " + sample_hash)
         url_indicator.short_description = ("URLs from " + sample_hash)
-        url_indicator.set_producer_identity("Bechtel Corporation")
+        url_indicator.set_producer_identity(PRODUCER_NAME)
         url_indicator.set_produced_time(utils.dates.now())
         url_indicator.indicator_types.append("URL Watchlist")
 
@@ -111,7 +111,7 @@ def create_stix_file():
         hash_indicator.title = "Malware Artifacts - File Hash"
         hash_indicator.description = ("File hashes derived from sandboxed malware sample.  MD5 Hash: " + sample_hash)
         hash_indicator.short_description = ("Hash from " + sample_hash)
-        hash_indicator.set_producer_identity("Bechtel Corporation")
+        hash_indicator.set_producer_identity(PRODUCER_NAME)
         hash_indicator.set_produced_time(utils.dates.now())
         hash_indicator.indicator_types.append("File Hash Watchlist")
 
