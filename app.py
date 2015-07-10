@@ -1,11 +1,17 @@
-#!flask/bin/python
-from flask import Flask, jsonify, request, make_response
-import logging
-from logging.handlers import RotatingFileHandler
+#!bin/python
 
-# FOR STIX
-import json
-import re
+'''
+    File name: app.py
+    Author: Andrew Hill
+    Date created: 5/28/2015
+    Python Version: 2.7
+    Description: REST API to parse FireEye JSON notification and generate STIX XML.
+'''
+
+# Flask imports
+from flask import Flask, jsonify, request, make_response
+
+# STIX imports
 import stix.utils as utils
 from cybox.core import Observable
 from cybox.common import Hash
@@ -17,14 +23,20 @@ from stix.core import STIXPackage, STIXHeader
 from stix.indicator import Indicator
 from stix.utils import set_id_namespace
 from stix.data_marking import Marking, MarkingSpecification
-from stix.extensions.marking.tlp import TLPMarkingStructure
 
-# Constants
-stix_directory = "/tmp"
+# General imports
+import json
+import re
+
+# Definitions
+SAVE_DIRECTORY = "/tmp"
+PRODUCER_NAME = "Bechtel Corporation"
+PRODUCER_URL = "http://bechtel.com"
 
 app = Flask(__name__)
 
-@app.route('/api/v1/fe', methods=['POST', 'GET'])
+# FireEye API Route
+@app.route('/api/v1/fe', methods=['POST'])
 def create_stix_file():
     # List of indicators to be deduped
     hostnames = []
@@ -33,11 +45,11 @@ def create_stix_file():
     md5s = []
     sha1s = []
 
-    # namespace
-    NAMESPACE = {"http://bechtel.com" : "Bechtel"}
+    # Set namespace
+    NAMESPACE = { str(PRODUCER_URL) : str(PRODUCER_NAME) }
     set_id_namespace(NAMESPACE)
 
-    # get the request load
+    # JSON load the POSTed request data
     try:
         data_recv = request.data
         data = json.loads(data_recv)
@@ -58,10 +70,12 @@ def create_stix_file():
         if "md5sum" in malware_sample:
             sample_hash = malware_sample['md5sum']
 
+    # If all else fails
     if sample_hash == "":
         sample_hash = "Unknown"
 
     # Indicators
+
     # Domains
     domain_indicator = Indicator()
     domain_indicator.title = "Malware Artifacts - Domain"
@@ -104,7 +118,7 @@ def create_stix_file():
 
     # Create the STIX Header and add a description.
     stix_header = STIXHeader({"Indicators - Malware Artifacts"})
-    stix_header.description = "Bechtel Corporation: FireEye Sample ID " + str(data['alert']['id'])
+    stix_header.description = PRODUCER_NAME + ": FireEye Sample ID " + str(data['alert']['id'])
     stix_package.stix_header = stix_header
 
     if "network" in data['alert']['explanation']['os-changes']:
@@ -142,7 +156,7 @@ def create_stix_file():
                 if filename:
                     sha1s.append((filename.group(1), entry['sha1sum']))
 
-    # dedupe lists
+    # Dedupe lists
     for hostname in set(hostnames):
         hostname_observable = create_domain_name_observable(hostname)
         domain_indicator.add_observable(hostname_observable)
@@ -170,11 +184,12 @@ def create_stix_file():
     stix_package.add(hash_indicator)
 
     # Save to file
-    save_as = stix_directory + "/fireeye_" + str(data['alert']['id']) + ".xml"
+    save_as = SAVE_DIRECTORY + "/fireeye_" + str(data['alert']['id']) + ".xml"
     f = open(save_as, 'w')
     f.write(stix_package.to_xml())
     f.close
 
+    # Return success response
     return make_response(jsonify({'Success': "STIX document succesfully generated,"}), 200)
 
 def create_ipv4_observable(ipv4_address):
@@ -212,17 +227,6 @@ def create_url_observable(url):
     url_observable.short_description = "URL from malware."
     return url_observable
 
-# def create_api_observable(description, function_name, address):
-#     api_object = API.from_dict({'description': description, 'function_name': function_name, 'address': address})
-#     api_observable = Observable(api_object)
-#     api_observable.title = "Malware Artifact - URL"
-#     api_observable.description = "URL derived from sandboxed malware sample."
-#     api_observable.short_description = "URL from malware."
-#     return api_observable
-
 if __name__ == '__main__':
-    handler = RotatingFileHandler('request.log', maxBytes=100000, backupCount=1)
-    handler.setLevel(logging.INFO)
-    app.logger.addHandler(handler)
     app.run(threaded=True, host='0.0.0.0', debug=True)
 
