@@ -29,6 +29,11 @@ import json
 import re
 import config
 
+# Pull config data
+SAVE_DIRECTORY = config.SAVE_DIRECTORY
+PRODUCER_NAME = config.PRODUCER_NAME
+PRODUCER_URL = config.PRODUCER_URL
+
 app = Flask(__name__)
 
 # FireEye API Route
