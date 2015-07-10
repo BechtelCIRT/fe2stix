@@ -27,11 +27,7 @@ from stix.data_marking import Marking, MarkingSpecification
 # General imports
 import json
 import re
-
-# Definitions
-SAVE_DIRECTORY = "/tmp"
-PRODUCER_NAME = "Bechtel Corporation"
-PRODUCER_URL = "http://bechtel.com"
+import config
 
 app = Flask(__name__)
 
