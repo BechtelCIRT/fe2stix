@@ -29,6 +29,11 @@ PRODUCER_URL = "http://www.yourcompany.com"
 ```
 
 ## Test it out!
+### Run the application
+```
+$ python app.py
+```
+
 ### Post data with cURL
 ```
 $ curl -H "Content-Type: application/json" -X POST -d '{JSON OBJECT}' http://youserver.com:5000/api/v1/fe
