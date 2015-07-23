@@ -7,6 +7,8 @@
     Python Version: 2.7
     Description: REST API to parse FireEye JSON notification and generate STIX XML.
 
+    MIT LICENSE
+
     Copyright (c) 2015 Andrew J Hill
     
     Permission is hereby granted, free of charge, to any person obtaining a copy
