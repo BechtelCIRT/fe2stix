@@ -62,7 +62,7 @@ By default, inidcators will go to the /tmp directory.
 * Provide Apache/WSGI daemon configuration
 * Expand API to allow misc. POSTs of data and parse indicators
 
-### License
+### MIT License
 
 Copyright (c) 2015 Andrew J Hill
 
